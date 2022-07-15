@@ -1,0 +1,35 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/add.sol": {
+      "content": "// SPDX-License-Identifier: MIT\n//pragma\npragma solidity ^0.8.0;\n\n/**@title THe contract add two Numbers\n *@author Mustakim Nagori\n *@notice This simple contract will add two Numbers and purpose behind is to understand the stuff\n *@dev this implement two functions get and sum\n */\n// contract\ncontract add {\n    uint256 num1;\n    uint256 num2;\n\n    // public function\n    ///@dev this setNum function will set the value \n    function setNum(uint256 x, uint256 y) public {\n        num1 = x;\n        num2 = y;\n    }\n\n    ///@dev this sum function will add num1 & num2\n    ///@return , the sum of two number\n    function sum() public view returns (uint256) {\n        return num1 + num2;\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": false,
+      "runs": 200
+    },
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
